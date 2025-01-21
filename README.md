@@ -10,7 +10,7 @@ The Healthcare Inventory Mangemnet system is designed to helps track health reco
 - **Request Body**:
   ```json
   {
-    "name": "Jord Doe",
+    "name": "sri",
     "bornDate": "1999-01-01",
     "phoneNumber": 1234567890,
     "age": 33
@@ -29,7 +29,7 @@ The Healthcare Inventory Mangemnet system is designed to helps track health reco
   [
    {
      "id": 1,
-    "name": "Jord Doe",
+    "name": "sri",
     "bornDate": "1999-01-01",
     "phoneNumber": 1234567890,
     "age": 33
@@ -47,7 +47,7 @@ The Healthcare Inventory Mangemnet system is designed to helps track health reco
 ```json
 {
      "id": 1,
-    "name": "Jord Doe",
+    "name": "sri",
     "bornDate": "1999-01-01",
     "phoneNumber": 1234567890,
     "age": 33
@@ -103,10 +103,58 @@ The Healthcare Inventory Mangemnet system is designed to helps track health reco
 
   1. **Create a New Health Record**:
      - **POST**: `http://localhost:8080/api`
+     - **Request Body**:
+    ```json
+    {
+      "name": "Jord Doe",
+      "bornDate": "1999-01-01",
+      "phoneNumber": 1234567890,
+      "age": 33
+    }
+    
+  - **Response**:
+    ```
+    Record added successfully.
+    ```
   2. **Get All Health Records**:
      - **GET**: `http://localhost:8080/api`
+     - **Response**:
+      ```json
+      [
+       {
+         "id": 1,
+        "name": "Sri",
+        "bornDate": "1999-01-01",
+        "phoneNumber": 1234567890,
+        "age": 33
+      },
+      {
+         "id": 2,
+        "name": "Srinath",
+        "bornDate": "2000-01-01",
+        "phoneNumber": 198989898,
+        "age": 27
+      }, 
+      ]
+      ```
   3. **Get a Health Record by ID**:
      - **GET**: `http://localhost:8080/api/{id}`
+     - **Response:**  
+      ```json
+      {
+           "id": 1,
+          "name": "Jord Doe",
+          "bornDate": "1999-01-01",
+          "phoneNumber": 1234567890,
+          "age": 33
+      }
+      ```
   4. **Delete a Health Record by ID**:
      - **DELETE**: `http://localhost:8080/api/{id}`
+     - **Request Parameters:**  
+     `id` (Path Variable): The ID of the health record to retrieve. 
+      - **Response**:
+      ```
+      Record is deleted for id = 1
+      ```
 
